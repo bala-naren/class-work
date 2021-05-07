@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bind Method</title>
+</head>
+<body>
+
+</body>
+<script>
+	var person1 = {firstName: 'Bala', lastName: 'naren'};
+
+function say() {
+    console.log('Hello ' + this.firstName + ' ' + this.lastName);
+}
+
+var sayHello = say.bind(person1);
+
+sayHello();
+</script>
+</html>

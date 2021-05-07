@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Call method</title>
+</head>
+<body>
+
+</body>
+<script>
+	var person1 = {firstName: 'Bala', lastName: 'naren'};
+
+function say(greeting) {
+    console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+}
+
+say.call(person1, 'Hello');
+
+</script>
+</html>

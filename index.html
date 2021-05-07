@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="div">
+		<h1>JAVASCRIPT</h1>
+		<div class="main">
+			<div class="box1">
+				<h3>Call Method</h3>
+				<p class="text">The call() method calls a function functionName with a given this value and arguments. The first argument of the call() method thisArg is the this value. It allows you to set the this value to any given object. The remaining arguments of the call() method arg1 , arg2 ,… are the arguments of the function.</p>
+				<div class="example">
+					<p>var person1 = {firstName: 'Bala', lastName: 'naren'};</br>
+
+function say(greeting) {</br>
+    console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);</br>
+}</br>
+
+say.call(person1, 'Hello');
+                    </p>
+				</div>
+				<a href="Callmethod.html" target="blank">Demo</a>
+			</div>
+
+			<div class="box2">
+			<h3>Apply Method</h3>
+				<p class="text">The apply() method is an important method of the function prototype and is used to call other functions with a provided this keyword value and arguments provided in the form of array or an array like object. Array-like objects may refer to NodeList or the arguments object inside a function.</p>
+				<div class="example">
+					<p>var person1 = {firstName: 'Bala', lastName: 'naren'};</br>
+
+function say(greeting) {</br>
+    console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);</br>
+}</br>
+
+say.apply(person1, ['Hello']); 
+                    </p>
+				</div>
+				<a href="Applymethod.html" target="blank1">Demo</a>
+			</div>
+
+			<div class="box3">
+			<h3>Bind Method</h3>
+				<p class="text">The bind() method creates a new function, when invoked, has the this sets to a provided value.The bind() method allows an object to borrow a method from another object without making a copy of that method. This is known as function borrowing in JavaScript.</p>
+				<div class="example">
+					<p>var person1 = {firstName: 'Bala', lastName: 'naren'};</br>
+
+function say() {</br>
+    console.log('Hello ' + this.firstName + ' ' + this.lastName);</br>
+}</br>
+
+var sayHello = say.bind(person1);</br>
+
+sayHello();
+                    </p>
+				</div>
+				<a href="Bindmethod.html" target="blank2">Demo</a>
+			</div>
+
+			<div class="box4">
+			<h3>IIFE Method</h3>
+				<p class="text">An Immediately-invoked Function Expression (IIFE for friends) is a way to execute functions immediately, as soon as they are created. IIFEs are very useful because they don't pollute the global object, and they are a simple way to isolate variables declarations.	</p>
+				<div class="example">
+					<p>(function () {</br>
+						console.log('Hello Bala naren')</br>
+					}) ();
+                    </p>
+				</div>
+				<a href="IIfe.html" target="blank3">Demo</a>
+			</div>
+
+			<div class="box5">
+			<h3>Closure Method</h3>
+				<p class="text">A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function.</p>
+				<div class="example">
+					<p>function A () {</br>
+                    let num = 2</br>
+                    let sum = 5</br>
+                    function B () {</br>
+                        console.log(num + 3 + sum)
+                    }</br>
+                    B()</br>
+                }</br>
+
+                A()
+                    </p>
+				</div>
+				<a href="Closure.html" target="blank4">Demo</a>
+			</div>
+
+			<div class="box6">
+			<h3>Spread operator</h3>
+				<p class="text">The spread operator allows us to spread the value of an array (or any iterable) across zero or more arguments in a function or elements in an array (or any iterable). The rest parameter allows us to pass an indefinite number of parameters to a function and access them in an array.</p>
+				<div class="example">
+					<p>let array1 = [1, 2, 3];</br>
+                      let array2 = [...array1];</br>
+                      console.log(array2);
+                    </p>  
+				</div>
+				<div class="example">
+					<p>Function sum (num1, num2, num3) {</br>
+                      console.log(`num1 ${num1}, num2 ${num2}, num3 ${num3}`)</br>
+                      console.log(num1 + num2 + num3)</br>
+                      }</br>
+
+                      const arr = [1, 2, 3]</br>
+
+                       sum(...arr)
+                    </p> 
+				</div>
+				<a href="Spread operator.html" target="blank5">Demo</a>
+			</div>
+
+			<div class="box7">
+			<h3>Rest operator</h3>
+				<p class="text">Rest parameter is an improved way to handle function parameter, allowing us to more easily handle various input as parameters in a function. The rest parameter syntax allows us to represent an indefinite number of arguments as an array</p>
+				<div class="example">
+					<p>function add (...num) {</br>
+                        console.log(num)</br>
+                     }</br>
+
+                       add(1, 2, 3, 4, 5)
+                     </p> 
+				</div>
+				<a href="Rest operator.html" target="blank6">Demo</a>
+			</div>
+
+			<div class="box8">
+			<h3>Optional chaining </h3>
+				<p class="text">The optional chaining operator provides a way to simplify accessing values through connected objects when it's possible that a reference or function may be undefined or null . For example, consider an object obj which has a nested structure. ... operator instead of just</p>
+				<div class="example">
+					<p>let car = {</br>
+                         brand: 'A',</br>
+                         parts{</br>
+                         brake: 'b',
+                     }</br>
+                     }</br>
+                     let brakevalue = car?.parts?.brake</br>
+                     console.log(brakevalue);
+                     </p> 
+				</div>
+				<a href="Optional chaining.html" target="blank7">Demo</a>
+			</div>
+
+
+		</div>
+	</div>
+
+</body>
+<script>
+	var person1 = {firstName: 'Bala', lastName: 'naren'};
+
+function say(greeting) {
+    console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+}
+
+say.call(person1, 'Hello');
+</script>
+</html>
